@@ -5,7 +5,7 @@ pipeline {
 	        // Environment Variables
 	        environment {
 	        MAJOR = '1'
-	        MINOR = '0'
+	        MINOR = '1'
 
 			UIPATH_ORCH_CREDENTIALS = [$class: 'UserPassAuthenticationEntry', credentialsId: 'ui-orch-dev-jenkins']
 	        //Orchestrator Services
