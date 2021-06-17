@@ -6,15 +6,17 @@ pipeline {
 	        environment {
 	        MAJOR = '1'
 	        MINOR = '0'
+
+			UIPATH_ORCH_CREDENTIALS = [$class: 'UserPassAuthenticationEntry', credentialsId: 'ui-orch-dev-jenkins']
 	        //Orchestrator Services
-	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
-	        UIPATH_ORCH_LOGICAL_NAME = "anupaminc"
-	        UIPATH_ORCH_TENANT_NAME = "Descriptify"
-	        UIPATH_ORCH_FOLDER_NAME = "Default"
+	        UIPATH_ORCH_URL = "https://gl-ui-orchestrator.canadaeast.cloudapp.azure.com"
+	        //UIPATH_ORCH_LOGICAL_NAME = "anupaminc"
+	        UIPATH_ORCH_TENANT_NAME = "Development"
+	        UIPATH_ORCH_FOLDER_NAME = "yash.brahmbhatt@ad's workspace"
 	    }
 	
 
-	    stages {
+	     stages {
 	
 
 	        // Printing Basic Information
@@ -36,12 +38,6 @@ pipeline {
 	        stage('Build') {
 	            steps {
 	                echo "Building..with ${WORKSPACE}"
-	                UiPathPack (
-	                      outputPath: "Output\\${env.BUILD_NUMBER}",
-	                      projectJsonPath: "project.json",
-	                      version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"],
-	                      useOrchestrator: false
-	        )
 	            }
 	        }
 	         // Test Stages
@@ -56,17 +52,6 @@ pipeline {
 	        stage('Deploy to UAT') {
 	            steps {
 	                echo "Deploying ${BRANCH_NAME} to UAT "
-	                UiPathDeploy (
-	                packagePath: "Output\\${env.BUILD_NUMBER}",
-	                orchestratorAddress: "${UIPATH_ORCH_URL}",
-	                orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
-	                folderName: "${UIPATH_ORCH_FOLDER_NAME}",
-	                environments: 'DEV',
-	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'), 
-	
-
-	        )
 	            }
 	        }
 	
@@ -77,8 +62,8 @@ pipeline {
 	        stage('Deploy to Production') {
 	            steps {
 	                echo 'Deploy to Production'
-	                }
 	            }
+	        }
 	    }
 	
 
