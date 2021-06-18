@@ -28,8 +28,6 @@ pipeline {
 	                echo "Jenkins JOB Name ${env.JOB_NAME}"
 	                echo "GitHub BranhName ${env.BRANCH_NAME}"
 	                checkout scm
-	
-
 	            }
 	        }
 	
@@ -38,12 +36,14 @@ pipeline {
 	        stage('Build') {
 	            steps {
 	                echo "Building..with ${WORKSPACE}"
+
 	            }
 	        }
 	         // Test Stages
 	        stage('Test') {
 	            steps {
 	                echo 'Testing..the workflow...'
+
 	            }
 	        }
 	
@@ -52,6 +52,7 @@ pipeline {
 	        stage('Deploy to UAT') {
 	            steps {
 	                echo "Deploying ${BRANCH_NAME} to UAT "
+
 	            }
 	        }
 	
