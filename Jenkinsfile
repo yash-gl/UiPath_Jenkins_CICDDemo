@@ -13,8 +13,7 @@ pipeline {
 	        	//UIPATH_ORCH_LOGICAL_NAME = "anupaminc"
 	        	UIPATH_ORCH_TENANT_NAME = "Development"
 	        	UIPATH_ORCH_FOLDER_NAME = "yash.brahmbhatt@ad's workspace"
-				OUTPUT_PATH = 
-	    	
+			}
 	
 
 	     	stages {
