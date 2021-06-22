@@ -27,7 +27,11 @@ pipeline {
 	                	echo "Jenkins JOB Number ${env.BUILD_NUMBER}"
 	                	echo "Jenkins JOB Name ${env.JOB_NAME}"
 	                	echo "GitHub Branch Name ${env.BRANCH_NAME}"
-	                	checkout scm
+	                	checkout(
+							[$class: 'GitSCM', branches: [[name: '**']], 
+							extensions: [], 
+							userRemoteConfigs: [[credentialsId: 'github-yash', url: 'https://github.com/yash-gl/UiPath_Jenkins_CICDDemo']]]
+						)
 	            	}
 	        	}
 	
