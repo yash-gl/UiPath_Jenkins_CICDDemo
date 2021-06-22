@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NoxO9NgyDYrKmg5fOB8NBhNgQrzzP0f1nwo+/vR0ReFiTA0eWLWtffSSycixXiEQHFhAttgtubdq1ZnpPwgouQ==",
+  "dgSpecHash": "RiLZJx4BvSyqZvzOxEJU1FoMBykU7kb2h+MfFd4OAImI0Cy7x6JZWeL6YkP7iYVLsiwHgXMfgXEPEbZomBluUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\eyash\\Documents\\UiPath\\UiPath_Jenkins_CICDDemo\\.local\\",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\eyash\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\eyash\\.nuget\\packages\\nlog\\4.5.11\\nlog.4.5.11.nupkg.sha512",
     "C:\\Users\\eyash\\.nuget\\packages\\npoi\\2.4.1\\npoi.2.4.1.nupkg.sha512",
+    "C:\\Users\\eyash\\.nuget\\packages\\octokit\\0.50.0\\octokit.0.50.0.nupkg.sha512",
     "C:\\Users\\eyash\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
     "C:\\Users\\eyash\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\eyash\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",

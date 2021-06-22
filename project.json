@@ -3,6 +3,7 @@
   "description": "CICD Demo Process with Jenkins",
   "main": "Main.xaml",
   "dependencies": {
+    "Octokit": "[0.50.0]",
     "UiPath.Excel.Activities": "[2.9.3]",
     "UiPath.Mail.Activities": "[1.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
@@ -50,5 +51,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }

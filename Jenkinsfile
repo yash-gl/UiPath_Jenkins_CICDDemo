@@ -7,7 +7,7 @@ pipeline {
 	        MAJOR = '1'
 	        MINOR = '1'
 
-			UIPATH_ORCH_CREDENTIALS = [$class: 'UserPassAuthenticationEntry', credentialsId: 'ui-orch-dev-jenkins']
+			
 	        //Orchestrator Services
 	        UIPATH_ORCH_URL = "https://gl-ui-orchestrator.canadaeast.cloudapp.azure.com"
 	        //UIPATH_ORCH_LOGICAL_NAME = "anupaminc"
@@ -26,7 +26,7 @@ pipeline {
 	                echo "Jenkins URL ${env.JENKINS_URL}"
 	                echo "Jenkins JOB Number ${env.BUILD_NUMBER}"
 	                echo "Jenkins JOB Name ${env.JOB_NAME}"
-	                echo "GitHub BranhName ${env.BRANCH_NAME}"
+	                echo "GitHub Branch Name ${env.BRANCH_NAME}"
 	                checkout scm
 	            }
 	        }

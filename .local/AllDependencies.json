@@ -593,6 +593,20 @@
           "lib/net45/NPOI.dll": {}
         }
       },
+      "Octokit/0.50.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/Octokit.dll": {}
+        }
+      },
       "SharpZipLib/1.2.0": {
         "type": "package",
         "compile": {
@@ -2196,6 +2210,20 @@
           "lib/net45/NPOI.OpenXml4Net.dll": {},
           "lib/net45/NPOI.OpenXmlFormats.dll": {},
           "lib/net45/NPOI.dll": {}
+        }
+      },
+      "Octokit/0.50.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net46/_._": {}
+        },
+        "runtime": {
+          "lib/net46/Octokit.dll": {}
         }
       },
       "SharpZipLib/1.2.0": {
@@ -4046,6 +4074,22 @@
         "npoi.nuspec"
       ]
     },
+    "Octokit/0.50.0": {
+      "sha512": "J5vqespSvjxIAAtjG1Tc6ghBqyfRgDJtKnk/ifi4N0hD/f3JbPwyEDRT+Eelu/bS4C4M6mu5gt1WJqar+fByzg==",
+      "type": "package",
+      "path": "octokit/0.50.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/Octokit.dll",
+        "lib/net46/Octokit.xml",
+        "lib/netstandard2.0/Octokit.dll",
+        "lib/netstandard2.0/Octokit.xml",
+        "octokit.0.50.0.nupkg.sha512",
+        "octokit.nuspec",
+        "octokit.png"
+      ]
+    },
     "SharpZipLib/1.2.0": {
       "sha512": "zvWa/L02JHNatdtjya6Swpudb2YEHaOLHL1eRrqpjm71iGRNUNONO5adUF/9CHbSJbzhELW1UoH4NGy7n7+3bQ==",
       "type": "package",
@@ -5087,6 +5131,7 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "Octokit >= 0.50.0 <= 0.50.0",
       "UiPath.Excel.Activities >= 2.9.3 <= 2.9.3",
       "UiPath.Mail.Activities >= 1.9.3 <= 1.9.3",
       "UiPath.System.Activities >= 20.10.1 <= 20.10.1",
@@ -5107,6 +5152,11 @@
     "frameworks": {
       "net461": {
         "dependencies": {
+          "Octokit": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[0.50.0, 0.50.0]"
+          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
